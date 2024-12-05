@@ -89,7 +89,49 @@ nav h3 {
 .nav-menu ul li:hover::after {
     width: 100%;
 }
-
+.newbar {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35px;
+    height: 20px;
+    cursor: pointer;
+   position: relative;
+    
+    
+}
+.span {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+.span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #ff5733, #ffbd33, #75ff33);
+    animation: flow 2s infinite;
+  } 
+  @keyframes flow {
+    0% {
+        left: -100%;
+    }
+  
+    50% {
+        left: 50%;
+    }
+  
+    100% {
+        left: 100%;
+    }
+  }
 .discription {
     width: 90%;
     height: 600px;
